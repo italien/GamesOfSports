@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/home/florian/GamesOfSport/app/build/intermediates/pre-dexed/debug/Parse-1.7.1-e7a11119d57872f1fbcaad0c918d51a1de0e9397.jar"
+        jar="/home/florian/GamesOfSport/app/libs/Parse-1.7.1.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="87c45f9f66da531a65f065ee32f603c7e6db1528"/>
+    <item
+        dex="/home/florian/GamesOfSport/app/build/intermediates/pre-dexed/debug/bolts-android-1.1.2-898675b32905fa9355dc33705f6a4eaf4c62b2e8.jar"
+        jar="/home/florian/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.1.2/91c20388c9a45f62b5ed8fe0502bb76ff6251fc7/bolts-android-1.1.2.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="91c20388c9a45f62b5ed8fe0502bb76ff6251fc7"/>
+
+</pre-dex-items>
