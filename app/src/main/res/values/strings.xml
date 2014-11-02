@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">GamesOfSport</string>
+    <string name="app_name">GamesOfSports</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="app_id">625780580864433</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_section1">Individual Sport</string>
+    <string name="title_section2">Team Sport</string>
+    <string name="title_section3">Leaderboard</string>
+    <string name="title_section4">Settings</string>
+    <string name="title_section5">Home</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
 
 </resources>

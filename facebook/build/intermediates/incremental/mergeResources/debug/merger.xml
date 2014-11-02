@@ -2,208 +2,208 @@
 <merger version="2" >
 
     <dataSet config="20.0.0" >
-        <source path="/home/florian/GamesOfSport/facebook/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/res" />
+        <source path="/home/florian/GamesOfSports/facebook/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/res" />
     </dataSet>
     <dataSet config="main" >
-        <source path="/home/florian/GamesOfSport/facebook/res" >
+        <source path="/home/florian/GamesOfSports/facebook/res" >
             <file
                 name="com_facebook_button_like_background"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_button_like_background.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_button_like_background.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_like"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_button_like.xml"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_button_like.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_picker_list_selector_disabled"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_picker_list_selector_disabled.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_picker_list_selector_disabled.9.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_profile_picture_blank_square"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_profile_picture_blank_square.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_profile_picture_blank_square.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_close"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_close.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_close.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_inverse_icon"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_inverse_icon.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_inverse_icon.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_picker_list_selector"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_picker_list_selector.xml"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_picker_list_selector.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_blue_normal"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_button_blue_normal.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_button_blue_normal.9.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_picker_list_pressed"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_picker_list_pressed.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_picker_list_pressed.9.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_list_section_header_background"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_list_section_header_background.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_list_section_header_background.9.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_picker_list_longpressed"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_picker_list_longpressed.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_picker_list_longpressed.9.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_place_default_icon"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_place_default_icon.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_place_default_icon.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_logo"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_logo.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_logo.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_picker_item_background"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_picker_item_background.xml"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_picker_item_background.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_focused"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_button_grey_focused.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_button_grey_focused.9.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_like_background_selected"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_button_like_background_selected.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_button_like_background_selected.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_usersettingsfragment_background_gradient"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_usersettingsfragment_background_gradient.xml"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_usersettingsfragment_background_gradient.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_blue_pressed"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_button_blue_pressed.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_button_blue_pressed.9.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_check"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_button_check.xml"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_button_check.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_top_button"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_top_button.xml"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_top_button.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_list_divider"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_list_divider.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_list_divider.9.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_profile_picture_blank_portrait"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_profile_picture_blank_portrait.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_profile_picture_blank_portrait.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_pressed"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_button_grey_pressed.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_button_grey_pressed.9.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_blue_focused"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_button_blue_focused.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_button_blue_focused.9.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_picker_list_selector_background_transition"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_picker_list_selector_background_transition.xml"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_picker_list_selector_background_transition.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_like_icon"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_button_like_icon.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_button_like_icon.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_like_pressed"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_button_like_pressed.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_button_like_pressed.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_top_background"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_top_background.xml"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_top_background.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_check_off"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_button_check_off.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_button_check_off.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_loginbutton_silver"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_loginbutton_silver.xml"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_loginbutton_silver.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_picker_list_focused"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_picker_list_focused.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_picker_list_focused.9.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_check_on"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_button_check_on.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_button_check_on.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_picker_top_button"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_picker_top_button.xml"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_picker_top_button.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_normal"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_button_grey_normal.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_button_grey_normal.9.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_profile_default_icon"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_profile_default_icon.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_profile_default_icon.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_like_icon_selected"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_button_like_icon_selected.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_button_like_icon_selected.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_like_selected"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_button_like_selected.xml"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_button_like_selected.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_blue"
-                path="/home/florian/GamesOfSport/facebook/res/drawable/com_facebook_button_blue.xml"
+                path="/home/florian/GamesOfSports/facebook/res/drawable/com_facebook_button_blue.xml"
                 qualifiers=""
                 type="drawable" />
             <file
-                path="/home/florian/GamesOfSport/facebook/res/values-mdpi/dimens.xml"
+                path="/home/florian/GamesOfSports/facebook/res/values-mdpi/dimens.xml"
                 qualifiers="mdpi-v4" >
                 <dimen name="com_facebook_picker_divider_width" >1px
                 </dimen>
             </file>
             <file
-                path="/home/florian/GamesOfSport/facebook/res/values/colors.xml"
+                path="/home/florian/GamesOfSports/facebook/res/values/colors.xml"
                 qualifiers="" >
                 <color name="com_facebook_picker_search_bar_background" >#f5f5f7
                 </color>
@@ -214,14 +214,14 @@
                 </dimen>
             </file>
             <file
-                path="/home/florian/GamesOfSport/facebook/res/values/drawables.xml"
+                path="/home/florian/GamesOfSports/facebook/res/values/drawables.xml"
                 qualifiers="" >
                 <drawable name="com_facebook_picker_default_separator_color" >
 #33464c59
                 </drawable>
             </file>
             <file
-                path="/home/florian/GamesOfSport/facebook/res/values/strings.xml"
+                path="/home/florian/GamesOfSports/facebook/res/values/strings.xml"
                 qualifiers="" >
                 <string name="com_facebook_usersettingsfragment_logged_in" >Logged in
                 </string>
@@ -281,7 +281,7 @@
                 </string>
             </file>
             <file
-                path="/home/florian/GamesOfSport/facebook/res/values/styles.xml"
+                path="/home/florian/GamesOfSports/facebook/res/values/styles.xml"
                 qualifiers="" >
                 <dimen name="com_facebook_profilepictureview_preset_size_normal" >100dp
                 </dimen>
@@ -445,7 +445,7 @@ center
                 </dimen>
             </file>
             <file
-                path="/home/florian/GamesOfSport/facebook/res/values/attrs.xml"
+                path="/home/florian/GamesOfSports/facebook/res/values/attrs.xml"
                 qualifiers="" >
                 <declare-styleable name="com_facebook_profile_picture_view" >
                     <attr name="preset_size" >
@@ -570,7 +570,7 @@ center
                 </declare-styleable>
             </file>
             <file
-                path="/home/florian/GamesOfSport/facebook/res/values-es/strings.xml"
+                path="/home/florian/GamesOfSports/facebook/res/values-es/strings.xml"
                 qualifiers="es" >
                 <string name="com_facebook_nearby" >Cercano
                 </string>
@@ -625,23 +625,23 @@ center
             </file>
             <file
                 name="com_facebook_close"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-ldpi/com_facebook_close.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-ldpi/com_facebook_close.png"
                 qualifiers="ldpi-v4"
                 type="drawable" />
             <file
-                path="/home/florian/GamesOfSport/facebook/res/values-ldpi/dimens.xml"
+                path="/home/florian/GamesOfSports/facebook/res/values-ldpi/dimens.xml"
                 qualifiers="ldpi-v4" >
                 <dimen name="com_facebook_picker_divider_width" >1px
                 </dimen>
             </file>
             <file
-                path="/home/florian/GamesOfSport/facebook/res/values-hdpi/dimens.xml"
+                path="/home/florian/GamesOfSports/facebook/res/values-hdpi/dimens.xml"
                 qualifiers="hdpi-v4" >
                 <dimen name="com_facebook_picker_divider_width" >1px
                 </dimen>
             </file>
             <file
-                path="/home/florian/GamesOfSport/facebook/res/values-he/strings.xml"
+                path="/home/florian/GamesOfSports/facebook/res/values-he/strings.xml"
                 qualifiers="he" >
                 <string name="com_facebook_requesterror_password_changed" >.הסיסמה שלך בפייסבוק השתנתה, אנא חבר מחדש את האפליקציה עם פייסבוק
                 </string>
@@ -696,407 +696,407 @@ center
             </file>
             <file
                 name="com_facebook_tooltip_black_bottomnub"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xhdpi/com_facebook_tooltip_black_bottomnub.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xhdpi/com_facebook_tooltip_black_bottomnub.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_background"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xhdpi/com_facebook_button_like_background.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xhdpi/com_facebook_button_like_background.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_blue_topnub"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xhdpi/com_facebook_tooltip_blue_topnub.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xhdpi/com_facebook_tooltip_blue_topnub.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_close"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xhdpi/com_facebook_close.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xhdpi/com_facebook_close.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_inverse_icon"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xhdpi/com_facebook_inverse_icon.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xhdpi/com_facebook_inverse_icon.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_black_xout"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xhdpi/com_facebook_tooltip_black_xout.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xhdpi/com_facebook_tooltip_black_xout.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_blue_normal"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xhdpi/com_facebook_button_blue_normal.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xhdpi/com_facebook_button_blue_normal.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_logo"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xhdpi/com_facebook_logo.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xhdpi/com_facebook_logo.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_focused"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xhdpi/com_facebook_button_grey_focused.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xhdpi/com_facebook_button_grey_focused.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_background_selected"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xhdpi/com_facebook_button_like_background_selected.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xhdpi/com_facebook_button_like_background_selected.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_blue_pressed"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xhdpi/com_facebook_button_blue_pressed.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xhdpi/com_facebook_button_blue_pressed.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_blue_bottomnub"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xhdpi/com_facebook_tooltip_blue_bottomnub.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xhdpi/com_facebook_tooltip_blue_bottomnub.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_pressed"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xhdpi/com_facebook_button_grey_pressed.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xhdpi/com_facebook_button_grey_pressed.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_black_topnub"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xhdpi/com_facebook_tooltip_black_topnub.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xhdpi/com_facebook_tooltip_black_topnub.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_blue_focused"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xhdpi/com_facebook_button_blue_focused.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xhdpi/com_facebook_button_blue_focused.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_icon"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xhdpi/com_facebook_button_like_icon.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xhdpi/com_facebook_button_like_icon.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_pressed"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xhdpi/com_facebook_button_like_pressed.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xhdpi/com_facebook_button_like_pressed.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_blue_background"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xhdpi/com_facebook_tooltip_blue_background.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xhdpi/com_facebook_tooltip_blue_background.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_blue_xout"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xhdpi/com_facebook_tooltip_blue_xout.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xhdpi/com_facebook_tooltip_blue_xout.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_picker_magnifier"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xhdpi/com_facebook_picker_magnifier.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xhdpi/com_facebook_picker_magnifier.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_black_background"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xhdpi/com_facebook_tooltip_black_background.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xhdpi/com_facebook_tooltip_black_background.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_normal"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xhdpi/com_facebook_button_grey_normal.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xhdpi/com_facebook_button_grey_normal.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_icon_selected"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xhdpi/com_facebook_button_like_icon_selected.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xhdpi/com_facebook_button_like_icon_selected.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_black_bottomnub"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-mdpi/com_facebook_tooltip_black_bottomnub.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-mdpi/com_facebook_tooltip_black_bottomnub.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_blue_topnub"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-mdpi/com_facebook_tooltip_blue_topnub.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-mdpi/com_facebook_tooltip_blue_topnub.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_inverse_icon"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-mdpi/com_facebook_inverse_icon.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-mdpi/com_facebook_inverse_icon.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_black_xout"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-mdpi/com_facebook_tooltip_black_xout.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-mdpi/com_facebook_tooltip_black_xout.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_blue_normal"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-mdpi/com_facebook_button_blue_normal.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-mdpi/com_facebook_button_blue_normal.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_blue_pressed"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-mdpi/com_facebook_button_blue_pressed.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-mdpi/com_facebook_button_blue_pressed.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_blue_bottomnub"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-mdpi/com_facebook_tooltip_blue_bottomnub.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-mdpi/com_facebook_tooltip_blue_bottomnub.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_black_topnub"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-mdpi/com_facebook_tooltip_black_topnub.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-mdpi/com_facebook_tooltip_black_topnub.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_blue_focused"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-mdpi/com_facebook_button_blue_focused.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-mdpi/com_facebook_button_blue_focused.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_blue_background"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-mdpi/com_facebook_tooltip_blue_background.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-mdpi/com_facebook_tooltip_blue_background.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_blue_xout"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-mdpi/com_facebook_tooltip_blue_xout.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-mdpi/com_facebook_tooltip_blue_xout.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_picker_magnifier"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-mdpi/com_facebook_picker_magnifier.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-mdpi/com_facebook_picker_magnifier.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_black_background"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-mdpi/com_facebook_tooltip_black_background.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-mdpi/com_facebook_tooltip_black_background.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_black_bottomnub"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-hdpi/com_facebook_tooltip_black_bottomnub.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-hdpi/com_facebook_tooltip_black_bottomnub.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_background"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-hdpi/com_facebook_button_like_background.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-hdpi/com_facebook_button_like_background.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_blue_topnub"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-hdpi/com_facebook_tooltip_blue_topnub.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-hdpi/com_facebook_tooltip_blue_topnub.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_close"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-hdpi/com_facebook_close.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-hdpi/com_facebook_close.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_inverse_icon"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-hdpi/com_facebook_inverse_icon.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-hdpi/com_facebook_inverse_icon.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_black_xout"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-hdpi/com_facebook_tooltip_black_xout.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-hdpi/com_facebook_tooltip_black_xout.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_blue_normal"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-hdpi/com_facebook_button_blue_normal.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-hdpi/com_facebook_button_blue_normal.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_logo"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-hdpi/com_facebook_logo.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-hdpi/com_facebook_logo.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_focused"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-hdpi/com_facebook_button_grey_focused.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-hdpi/com_facebook_button_grey_focused.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_background_selected"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-hdpi/com_facebook_button_like_background_selected.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-hdpi/com_facebook_button_like_background_selected.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_blue_pressed"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-hdpi/com_facebook_button_blue_pressed.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-hdpi/com_facebook_button_blue_pressed.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_blue_bottomnub"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-hdpi/com_facebook_tooltip_blue_bottomnub.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-hdpi/com_facebook_tooltip_blue_bottomnub.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_pressed"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-hdpi/com_facebook_button_grey_pressed.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-hdpi/com_facebook_button_grey_pressed.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_black_topnub"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-hdpi/com_facebook_tooltip_black_topnub.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-hdpi/com_facebook_tooltip_black_topnub.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_blue_focused"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-hdpi/com_facebook_button_blue_focused.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-hdpi/com_facebook_button_blue_focused.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_icon"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-hdpi/com_facebook_button_like_icon.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-hdpi/com_facebook_button_like_icon.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_pressed"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-hdpi/com_facebook_button_like_pressed.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-hdpi/com_facebook_button_like_pressed.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_blue_background"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-hdpi/com_facebook_tooltip_blue_background.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-hdpi/com_facebook_tooltip_blue_background.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_blue_xout"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-hdpi/com_facebook_tooltip_blue_xout.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-hdpi/com_facebook_tooltip_blue_xout.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_picker_magnifier"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-hdpi/com_facebook_picker_magnifier.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-hdpi/com_facebook_picker_magnifier.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_tooltip_black_background"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-hdpi/com_facebook_tooltip_black_background.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-hdpi/com_facebook_tooltip_black_background.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_normal"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-hdpi/com_facebook_button_grey_normal.9.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-hdpi/com_facebook_button_grey_normal.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_icon_selected"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-hdpi/com_facebook_button_like_icon_selected.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-hdpi/com_facebook_button_like_icon_selected.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_background"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xxhdpi/com_facebook_button_like_background.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xxhdpi/com_facebook_button_like_background.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_background_selected"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xxhdpi/com_facebook_button_like_background_selected.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xxhdpi/com_facebook_button_like_background_selected.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_icon"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xxhdpi/com_facebook_button_like_icon.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xxhdpi/com_facebook_button_like_icon.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_pressed"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xxhdpi/com_facebook_button_like_pressed.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xxhdpi/com_facebook_button_like_pressed.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_button_like_icon_selected"
-                path="/home/florian/GamesOfSport/facebook/res/drawable-xxhdpi/com_facebook_button_like_icon_selected.png"
+                path="/home/florian/GamesOfSports/facebook/res/drawable-xxhdpi/com_facebook_button_like_icon_selected.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="com_facebook_picker_title_bar_stub"
-                path="/home/florian/GamesOfSport/facebook/res/layout/com_facebook_picker_title_bar_stub.xml"
+                path="/home/florian/GamesOfSports/facebook/res/layout/com_facebook_picker_title_bar_stub.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_placepickerfragment"
-                path="/home/florian/GamesOfSport/facebook/res/layout/com_facebook_placepickerfragment.xml"
+                path="/home/florian/GamesOfSports/facebook/res/layout/com_facebook_placepickerfragment.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_picker_activity_circle_row"
-                path="/home/florian/GamesOfSport/facebook/res/layout/com_facebook_picker_activity_circle_row.xml"
+                path="/home/florian/GamesOfSports/facebook/res/layout/com_facebook_picker_activity_circle_row.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_tooltip_bubble"
-                path="/home/florian/GamesOfSport/facebook/res/layout/com_facebook_tooltip_bubble.xml"
+                path="/home/florian/GamesOfSports/facebook/res/layout/com_facebook_tooltip_bubble.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_picker_list_row"
-                path="/home/florian/GamesOfSport/facebook/res/layout/com_facebook_picker_list_row.xml"
+                path="/home/florian/GamesOfSports/facebook/res/layout/com_facebook_picker_list_row.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_picker_image"
-                path="/home/florian/GamesOfSport/facebook/res/layout/com_facebook_picker_image.xml"
+                path="/home/florian/GamesOfSports/facebook/res/layout/com_facebook_picker_image.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_login_activity_layout"
-                path="/home/florian/GamesOfSport/facebook/res/layout/com_facebook_login_activity_layout.xml"
+                path="/home/florian/GamesOfSports/facebook/res/layout/com_facebook_login_activity_layout.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_placepickerfragment_list_row"
-                path="/home/florian/GamesOfSport/facebook/res/layout/com_facebook_placepickerfragment_list_row.xml"
+                path="/home/florian/GamesOfSports/facebook/res/layout/com_facebook_placepickerfragment_list_row.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_picker_title_bar"
-                path="/home/florian/GamesOfSport/facebook/res/layout/com_facebook_picker_title_bar.xml"
+                path="/home/florian/GamesOfSports/facebook/res/layout/com_facebook_picker_title_bar.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_friendpickerfragment"
-                path="/home/florian/GamesOfSport/facebook/res/layout/com_facebook_friendpickerfragment.xml"
+                path="/home/florian/GamesOfSports/facebook/res/layout/com_facebook_friendpickerfragment.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_picker_checkbox"
-                path="/home/florian/GamesOfSport/facebook/res/layout/com_facebook_picker_checkbox.xml"
+                path="/home/florian/GamesOfSports/facebook/res/layout/com_facebook_picker_checkbox.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_usersettingsfragment"
-                path="/home/florian/GamesOfSport/facebook/res/layout/com_facebook_usersettingsfragment.xml"
+                path="/home/florian/GamesOfSports/facebook/res/layout/com_facebook_usersettingsfragment.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_picker_search_box"
-                path="/home/florian/GamesOfSport/facebook/res/layout/com_facebook_picker_search_box.xml"
+                path="/home/florian/GamesOfSports/facebook/res/layout/com_facebook_picker_search_box.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_search_bar_layout"
-                path="/home/florian/GamesOfSport/facebook/res/layout/com_facebook_search_bar_layout.xml"
+                path="/home/florian/GamesOfSports/facebook/res/layout/com_facebook_search_bar_layout.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_picker_list_section_header"
-                path="/home/florian/GamesOfSport/facebook/res/layout/com_facebook_picker_list_section_header.xml"
+                path="/home/florian/GamesOfSports/facebook/res/layout/com_facebook_picker_list_section_header.xml"
                 qualifiers=""
                 type="layout" />
             <file
-                path="/home/florian/GamesOfSport/facebook/res/values-xhdpi/dimens.xml"
+                path="/home/florian/GamesOfSports/facebook/res/values-xhdpi/dimens.xml"
                 qualifiers="xhdpi-v4" >
                 <dimen name="com_facebook_picker_divider_width" >2px
                 </dimen>
             </file>
             <file
-                path="/home/florian/GamesOfSport/facebook/res/values-iw/strings.xml"
+                path="/home/florian/GamesOfSports/facebook/res/values-iw/strings.xml"
                 qualifiers="iw" >
                 <string name="com_facebook_usersettingsfragment_log_in_button" >התחבר…
                 </string>
@@ -1150,11 +1150,11 @@ center
                 </string>
             </file>
         </source>
-        <source path="/home/florian/GamesOfSport/facebook/build/generated/res/rs/debug" />
-        <source path="/home/florian/GamesOfSport/facebook/build/generated/res/generated/debug" />
+        <source path="/home/florian/GamesOfSports/facebook/build/generated/res/rs/debug" />
+        <source path="/home/florian/GamesOfSports/facebook/build/generated/res/generated/debug" />
     </dataSet>
     <dataSet config="debug" >
-        <source path="/home/florian/GamesOfSport/facebook/src/debug/res" />
+        <source path="/home/florian/GamesOfSports/facebook/src/debug/res" />
     </dataSet>
 
 </merger>
