@@ -53,9 +53,15 @@ public class HomeActivity extends Activity
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
+        Fragment fragment = new StartFragment();
         FragmentManager fragmentManager = getFragmentManager();
+        switch (position) {
+            case 0:
+                fragment = new StartFragment();
+                break;
+        }
         fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
+                .replace(R.id.container, fragment)
                 .commit();
     }
 
