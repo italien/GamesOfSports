@@ -59,6 +59,9 @@ public class HomeActivity extends Activity
             case 0:
                 fragment = new StartFragment();
                 break;
+            case 4:
+                fragment = new SettingsFragment();
+                break;
         }
         fragmentManager.beginTransaction()
                 .replace(R.id.container, fragment)

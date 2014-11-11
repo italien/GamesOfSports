@@ -1,9 +1,10 @@
 package com.gamesofsports;
 
 
-import android.app.Fragment;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,43 +15,46 @@ import com.facebook.SessionState;
 import com.facebook.UiLifecycleHelper;
 import com.facebook.widget.LoginButton;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
+
 /**
- * Created by florian on 14. 11. 2.
+ * A simple {@link Fragment} subclass.
+ *
  */
-public class MainFragment extends android.support.v4.app.Fragment {
-    private static final String TAG = "MainFragment";
+public class SettingsFragment extends Fragment {
+    private static final String TAG = "SettingsFragment";
     private UiLifecycleHelper uiHelper;
 
+    public SettingsFragment() {
+        // Required empty public constructor
+    }
+
     @Override
-    public void onCreate(Bundle savedInstanceState)
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
+        View view = inflater.inflate(R.layout.fragment_settings, container, false);
+        return view;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         uiHelper = new UiLifecycleHelper(getActivity(), callback);
         uiHelper.onCreate(savedInstanceState);
     }
 
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-    {
-        View view = inflater.inflate(R.layout.activity_main, container, false);
-        LoginButton authButton = (LoginButton) view.findViewById(R.id.authButton);
-        authButton.setFragment(this);
-        authButton.setReadPermissions(Arrays.asList("public_profile"));
-        return view;
-    }
-
     private void onSessionStateChange(Session session, SessionState state, Exception exception)
     {
-        if (state.isOpened()) {
-            Intent intent = new Intent(getActivity(), HomeActivity.class);
-            startActivity(intent);
+        if (state.isOpened())
+        {
             Log.i(TAG, "Logged in...");
 
-        } else if (state.isClosed()) {
+        }
+        else if (state.isClosed())
+        {
+            Intent intent = new Intent(getActivity(), MainActivity.class);
+            startActivity(intent);
             Log.i(TAG, "Logged out...");
         }
     }
@@ -68,8 +72,8 @@ public class MainFragment extends android.support.v4.app.Fragment {
     {
         super.onResume();
         Session session = Session.getActiveSession();
-        if (session != null &&
-                (session.isOpened() || session.isClosed()) ) {
+        if (session != null && (session.isOpened() || session.isClosed()))
+        {
             onSessionStateChange(session, session.getState(), null);
         }
         uiHelper.onResume();
