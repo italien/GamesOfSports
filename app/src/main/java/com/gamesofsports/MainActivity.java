@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.parseFeatures.ParseFeatures;
+
 
 public class MainActivity extends FragmentActivity {
 
@@ -29,6 +31,7 @@ public class MainActivity extends FragmentActivity {
                     .findFragmentById(android.R.id.content);
             //    setContentView(R.layout.activity_main);
         }
+        ParseFeatures parseFeatures = new ParseFeatures(this);
     }
 
 
