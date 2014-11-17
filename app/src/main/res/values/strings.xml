@@ -15,4 +15,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="conditions">general terms</string>
     <string name="version">\t\t\tVersion 1.0\n ©2014 GamesOfSports</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

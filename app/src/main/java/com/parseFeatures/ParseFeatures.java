@@ -21,7 +21,7 @@ public class ParseFeatures {
     public ParseFeatures(Activity activity)
     {
         Parse.initialize(activity, "pBwfHRHqqI9aaauVc1jssgPi6R2fiyLY0kgUkO1g", "5aGubA4qBTBNHJf0ffsg6agnsqzd9qpRZvTN7MCn");
-        Parse.enableLocalDatastore(activity);
+        //Parse.enableLocalDatastore(activity);
     }
 
     public boolean saveObject(ParseObject object)

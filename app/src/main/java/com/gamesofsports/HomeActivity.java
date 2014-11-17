@@ -58,6 +58,12 @@ public class HomeActivity extends Activity
             case 0:
                 fragment = new StartFragment();
                 break;
+            case 1:
+                fragment = new ListIndividualSports();
+                break;
+            case 2:
+                fragment = new ListTeamSports();
+                break;
             case 4:
                 fragment = new SettingsFragment();
                 break;
