@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -33,6 +34,18 @@
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home" >
+        </activity>
+        <activity
+            android:name=".ListChallenges"
+            android:label="@string/title_activity_list_challenges" >
+        </activity>
+        <activity
+            android:name=".DescriptionChallenge"
+            android:label="@string/title_activity_description_challenge" >
+        </activity>
+        <activity
+            android:name=".StartChallenge"
+            android:label="@string/title_activity_start_challenge" >
         </activity>
     </application>
 
