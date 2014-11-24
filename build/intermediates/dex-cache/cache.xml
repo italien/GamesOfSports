@@ -2,40 +2,10 @@
 <pre-dex-items>
 
     <item
-        dex="/home/florian/GamesOfSports/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-3a78ffa9671c59a14c49893b3036d548fe3facde.jar"
-        jar="/home/florian/Documents/android-studio/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar"
+        dex="/Users/debarg_a/Documents/GamesOfSports/app/build/intermediates/pre-dexed/debug/classes-e0bae3fa225a37328721de2fd52c4f792923776c.jar"
+        jar="/Users/debarg_a/Documents/GamesOfSports/app/build/intermediates/exploded-aar/com.facebook.android/facebook/3.19.1/classes.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e"/>
-    <item
-        dex="/home/florian/GamesOfSports/app/build/intermediates/pre-dexed/debug/classes-2c22480ee1d6188f93933311c293ca2ba6c286ed.jar"
-        jar="/home/florian/GamesOfSports/app/build/intermediates/exploded-aar/com.facebook.android/facebook/3.19.1/classes.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="1b0cb74a01e2bd3839e317f291197e39db91fa06"/>
-    <item
-        dex="/home/florian/GamesOfSports/app/build/intermediates/pre-dexed/debug/bolts-android-1.1.2-898675b32905fa9355dc33705f6a4eaf4c62b2e8.jar"
-        jar="/home/florian/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.1.2/91c20388c9a45f62b5ed8fe0502bb76ff6251fc7/bolts-android-1.1.2.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="91c20388c9a45f62b5ed8fe0502bb76ff6251fc7"/>
-    <item
-        dex="/home/florian/GamesOfSports/app/build/intermediates/pre-dexed/debug/Parse-1.7.1-5e9d908207ec0459af9cbfed2b7eaa5cee9b0d52.jar"
-        jar="/home/florian/GamesOfSports/app/libs/Parse-1.7.1.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="87c45f9f66da531a65f065ee32f603c7e6db1528"/>
-    <item
-        dex="/home/florian/GamesOfSports/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-4211230a3390f87ec439603a3c4b13c1e7846c9d.jar"
-        jar="/home/florian/GamesOfSports/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/libs/internal_impl-21.0.0.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0"/>
-    <item
-        dex="/home/florian/GamesOfSports/app/build/intermediates/pre-dexed/debug/classes-9d53302e973114ca47a5a8c078f83195d65b57ef.jar"
-        jar="/home/florian/GamesOfSports/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/classes.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="686344a780033e4ba22b926cd225f8d4941247e6"/>
+        sha1="eec9363b17d3ed97aeb72b85248d47d9fe1312f9"/>
 
 </pre-dex-items>

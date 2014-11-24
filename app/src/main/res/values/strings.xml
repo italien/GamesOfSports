@@ -16,7 +16,6 @@
     <string name="conditions">general terms</string>
     <string name="version">\t\t\tVersion 1.0\n ©2014 GamesOfSports</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-<<<<<<< HEAD
     <string name="title_activity_list_challenges">ListChallenges</string>
     <string name="createChallenge">Create challenge</string>
     <string name="title_activity_description_challenge">DescriptionChallenge</string>
@@ -24,7 +23,5 @@
     <string name="shareChallenge">Share</string>
     <string name="title_activity_start_challenge">StartChallenge</string>
     <string name="hello_world">Hello world!</string>
-=======
->>>>>>> 0cc18f8285ec02ed52e9632f45ea78ed6b1133b1
 
 </resources>

@@ -28,7 +28,6 @@ public class MainActivity extends FragmentActivity {
                     .findFragmentById(android.R.id.content);
             //    setContentView(R.layout.activity_main);
         }
-        ParseFeatures parseFeatures = new ParseFeatures(this);
     }
 
 
