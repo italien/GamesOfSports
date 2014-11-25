@@ -5,4 +5,92 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.gamesofsports.StartChallenge">
 
+    <ImageView
+        android:id="@+id/logoChallenge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logogos256"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/textStartChallenge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        android:layout_below="@+id/logoChallenge"
+        android:text="@string/start_challenge"
+        />
+
+    <TextView
+        android:id="@+id/chrono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textStartChallenge"
+        android:layout_marginTop="20dp"
+        android:textSize="50sp"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:id="@+id/textPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chrono"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/points"
+        />
+
+    <TextView
+        android:id="@+id/textCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textPoint"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:textSize="50sp"
+        android:textColor="#000000"
+        android:text="@string/counter"
+        />
+
+
+
+    <Button
+        android:id="@+id/startStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/startStop"
+        />
+
+    <Button
+        android:id="@+id/addPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/startStop"
+        android:layout_toLeftOf="@+id/startStop"
+        android:layout_toStartOf="@+id/startStop"
+        android:textSize="25sp"
+        android:layout_marginBottom="25dp"
+        android:text="@string/addPoints"
+        />
+
+    <Button
+        android:id="@+id/removePoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/startStop"
+        android:layout_toEndOf="@+id/startStop"
+        android:layout_alignTop="@+id/addPoints"
+        android:textSize="25sp"
+        android:text="@string/removePoints"
+        />
+
 </RelativeLayout>

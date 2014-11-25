@@ -19,6 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.parse.Parse;
+import com.parseFeatures.ParseFeatures;
 
 
 public class HomeActivity extends Activity
@@ -47,6 +48,8 @@ public class HomeActivity extends Activity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+
+        ParseFeatures.getInstance().initializeParseFeatures(this);
     }
 
     @Override
