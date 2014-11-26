@@ -39,7 +39,7 @@ public class MainFragment extends android.support.v4.app.Fragment {
         View view = inflater.inflate(R.layout.activity_main, container, false);
         LoginButton authButton = (LoginButton) view.findViewById(R.id.authButton);
         authButton.setFragment(this);
-        authButton.setReadPermissions(Arrays.asList("public_profile"));
+        authButton.setReadPermissions(Arrays.asList("public_profile", "user_friends"));
         return view;
     }
 
