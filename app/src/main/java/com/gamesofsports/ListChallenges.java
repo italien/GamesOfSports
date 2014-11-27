@@ -8,13 +8,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.parseFeatures.ParseFeatures;
 
 
 public class ListChallenges extends Activity {
-    private ListView listChallenges;
+    private ListView    listChallenges;
+    private Button      create;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,14 @@ public class ListChallenges extends Activity {
             public void onItemClick(AdapterView<?> parent, final View view,
                                     int position, long id) {
                 Intent intent = new Intent(ListChallenges.this, DescriptionChallenge.class);
+                startActivity(intent);
+            }
+        });
+        create = (Button) findViewById(R.id.createChallenge);
+        create.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ListChallenges.this, CreateChallenge.class);
                 startActivity(intent);
             }
         });

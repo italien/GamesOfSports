@@ -5,33 +5,64 @@
     android:layout_height="match_parent"
     tools:context="com.gamesofsports.StartFragment">
 
-    <com.facebook.widget.ProfilePictureView
-        android:id="@+id/selection_profile_pic"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
-        android:gravity="center_horizontal"
-        facebook:preset_size="large"
-    />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/selection_user_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textColor="#ff000000"
-        android:textSize="20sp" />
+        <com.facebook.widget.ProfilePictureView
+            android:id="@+id/selection_profile_pic"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal"
+            facebook:preset_size="large"
+            />
 
-    <TextView
-        android:id="@+id/user_score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:textColor="#ff000000"
-        android:textSize="20sp"
-        android:text="Score : 0"
-        />
+        <TextView
+            android:id="@+id/selection_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/selection_profile_pic"
+            android:layout_centerHorizontal="true"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            />
 
+        <TextView
+            android:id="@+id/user_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/selection_user_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:text="Score : 0"
+            />
+
+        <TextView
+            android:id="@+id/user_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/user_score"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:text="Level 4"
+            />
+
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:id="@+id/user_experience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/user_level"
+            android:layout_marginTop="30dp"
+            />
+    </RelativeLayout>
 </FrameLayout>

@@ -21,7 +21,6 @@ public class ParseFeatures {
 
     private static ParseFeatures features = null;
     private boolean init = false;
-    private ParseUser user = null;
 
     public ParseFeatures()
     {
@@ -69,12 +68,15 @@ public class ParseFeatures {
         return new ParseUser();
     }
 
-    public boolean addInfosUser(ParseUser user, String facebookId)
+    public boolean addInfosUser(ParseUser user, List<String> infosUser)
     {
-        user.put("facebookId", facebookId);
+        if (infosUser.size() != 3)
+            return false;
+        user.setUsername(infosUser.get(0));
+        user.setPassword(infosUser.get(1));
+        user.setEmail(infosUser.get(2));
         user.put("experience", 0);
         user.put("level", 0);
-
         return true;
     }
 
@@ -84,41 +86,9 @@ public class ParseFeatures {
         return (result.toString());
     }
 
-    public boolean loginUser(String facebookId)
-    {
-        if (user != null)
-            return false;
-        ParseQuery<ParseUser> query = ParseUser.getQuery();
-        query.whereEqualTo("facebookId", facebookId);
-        try {
-            List<ParseUser> users = query.find();
-            user = users.get(0);
-        }
-        catch (ParseException e)
-        {
-            System.out.println("Error : " + e.getLocalizedMessage());
-            return false;
-        }
-        return true;
-    }
-
     public ParseUser getUser()
     {
-        return user;
-    }
-
-    public boolean logoutUser()
-    {
-        try {
-            user.unpin();
-        }
-        catch (ParseException e)
-        {
-            System.out.println("Error : " + e.getLocalizedMessage());
-            return false;
-        }
-        user = null;
-        return true;
+        return ParseUser.getCurrentUser();
     }
 
     public boolean saveObject(ParseObject object)

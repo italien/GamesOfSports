@@ -32,4 +32,9 @@
     <string name="endChallenge">Challenge ended !</string>
     <string name="shareFacebook">Share onFacebook</string>
     <string name="home">Home</string>
+    <string name="title_activity_create_challenge">CreateChallenge</string>
+    <string name="titleChallenge">Challenge name:</string>
+    <string name="titleDescription">Description</string>
+    <string name="titleTimer">Timer</string>
+    <string name="create">Create</string>
 </resources>
