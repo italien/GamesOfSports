@@ -39,11 +39,9 @@ public class ListTeamSports extends Fragment {
         View v = inflater.inflate(R.layout.fragment_list_team_sports, container, false);
         listTeamSport = (ListView) v.findViewById(R.id.listTeamSports);
         parse = ParseFeatures.getInstance();
-
         names = parse.getObjectName("Sports", "idCategory", 1);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, names);
         listTeamSport.setAdapter(adapter);// Inflate the layout for this fragment
-
         listTeamSport.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
@@ -53,8 +51,6 @@ public class ListTeamSports extends Fragment {
                 startActivity(intent);
             }
         });
-
-        listTeamSport.setAdapter(adapter);         // Inflate the layout for this fragment
         return v;
     }
 }

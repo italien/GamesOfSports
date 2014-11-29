@@ -50,11 +50,7 @@ public class ListIndividualSports extends Fragment {
                 startActivity(intent);
             }
         });
-        listTeamSport = (ListView) v.findViewById(R.id.listIndividualSports);
-        parse = ParseFeatures.getInstance();
-        names = parse.getObjectName("Sports", "idCategory", 0);
-        //ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, names);
-        listTeamSport.setAdapter(adapter);         // Inflate the layout for this fragment
+       // Inflate the layout for this fragment
         return v;
     }
 
