@@ -30,7 +30,7 @@
     <string name="startStop">Start</string>
     <string name="title_activity_end_challenge">EndChallenge</string>
     <string name="endChallenge">Challenge ended !</string>
-    <string name="shareFacebook">Share onFacebook</string>
+    <string name="shareFacebook">Share on Facebook</string>
     <string name="home">Home</string>
     <string name="title_activity_create_challenge">CreateChallenge</string>
     <string name="titleChallenge">Challenge name:</string>
@@ -38,4 +38,6 @@
     <string name="titleTimer">Timer</string>
     <string name="create">Create</string>
     <string name="nameApplication">Games Of Sports</string>
+    <string name="title_activity_share">ShareActivity</string>
+
 </resources>

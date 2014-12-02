@@ -61,6 +61,10 @@
             android:name=".CreateChallenge"
             android:label="@string/title_activity_create_challenge" >
         </activity>
+        <activity
+            android:name=".ShareActivity"
+            android:label="@string/title_activity_share" >
+        </activity>
     </application>
 
 </manifest>

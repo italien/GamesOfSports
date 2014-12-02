@@ -13,12 +13,13 @@ import android.widget.TextView;
 public class EndChallenge extends Activity {
 
     private TextView    results, numberPoints;
-    private Button      home;
+    private Button      home, shareFacebook;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end_challenge);
         home = (Button) findViewById(R.id.Home);
+        shareFacebook = (Button) findViewById(R.id.shareFacebook);
         results = (TextView) findViewById(R.id.result);
         numberPoints = (TextView) findViewById(R.id.numberPoints);
         Bundle extras = getIntent().getExtras();
@@ -31,6 +32,14 @@ public class EndChallenge extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(EndChallenge.this, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        shareFacebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EndChallenge.this ,ShareActivity.class);
                 startActivity(intent);
             }
         });

@@ -33,7 +33,7 @@ public class StartChallenge extends Activity {
         countDown = (TextView) findViewById(R.id.chrono);
 
         countDown.setText("0:30");
-        total = 30 * 1000;
+        total = 3 * 1000;
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
