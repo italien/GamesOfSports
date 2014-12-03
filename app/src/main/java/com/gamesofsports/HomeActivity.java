@@ -71,6 +71,9 @@ public class HomeActivity extends Activity
                 fragment = new LeaderBoardFragment();
                 break;
             case 4:
+                fragment = new AchievementFragment();
+                break;
+            case 5:
                 fragment = new SettingsFragment();
                 break;
         }
@@ -95,6 +98,9 @@ public class HomeActivity extends Activity
                 break;
             case 5:
                 mTitle = getString(R.string.title_section5);
+                break;
+            case 6:
+                mTitle = getString(R.string.title_section6);
                 break;
         }
     }
