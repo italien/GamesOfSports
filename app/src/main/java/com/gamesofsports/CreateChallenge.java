@@ -3,11 +3,13 @@ package com.gamesofsports;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.NumberPicker;
+import android.widget.TextView;
 
 
 public class CreateChallenge extends Activity {
@@ -15,12 +17,14 @@ public class CreateChallenge extends Activity {
     private int             minutesChallenge = 0;
     private int             secondesChallenge = 0;
     private Button          createNewChallenge;
-
+    private TextView        nameSport;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_challenge);
+
         createNewChallenge = (Button) findViewById(R.id.createNewChallenge);
+        nameSport = (TextView) findViewById(R.id.nameSport);
         minutes = (NumberPicker) findViewById(R.id.minutes);
         secondes = (NumberPicker) findViewById(R.id.secondes);
         minutes.setMinValue(0);
@@ -30,6 +34,10 @@ public class CreateChallenge extends Activity {
         minutes.setWrapSelectorWheel(true);
         secondes.setWrapSelectorWheel(true);
 
+
+        final Bundle extras = getIntent().getExtras();
+        if (extras != null)
+            nameSport.setText(extras.getStringArray("infosSportChallenge")[0]);
         createNewChallenge.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

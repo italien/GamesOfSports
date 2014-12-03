@@ -4,4 +4,9 @@
     android:layout_height="match_parent"
     tools:context="com.gamesofsports.AchievementFragment">
 
+    <ListView
+        android:id="@+id/listAchievements"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 </FrameLayout>

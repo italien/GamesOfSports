@@ -47,6 +47,10 @@ public class ListIndividualSports extends Fragment {
             public void onItemClick(AdapterView<?> parent, final View view,
                                     int position, long id) {
                 Intent intent = new Intent(getActivity(), ListChallenges.class);
+                Bundle infosSport = new Bundle();
+                String sportName = listIndiviudalSport.getItemAtPosition(position).toString();
+                infosSport.putStringArray("infosSport", new String[]{sportName, "0"});
+                intent.putExtras(infosSport);
                 startActivity(intent);
             }
         });

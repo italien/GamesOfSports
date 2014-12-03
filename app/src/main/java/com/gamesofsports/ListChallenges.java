@@ -3,6 +3,7 @@ package com.gamesofsports;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,11 +18,17 @@ import com.parseFeatures.ParseFeatures;
 public class ListChallenges extends Activity {
     private ListView    listChallenges;
     private Button      create;
+    private String      sportName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_challenges);
+        final Bundle extras = getIntent().getExtras();
+        if (extras != null)
+        {
+            sportName = extras.getStringArray("infosSport")[0];
+        }
         String[]challenges = {"challenge1", "challenge2", "challenge3", "challenge4"};
         listChallenges= (ListView) findViewById(R.id.listChallenges);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, challenges);
@@ -40,6 +47,9 @@ public class ListChallenges extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ListChallenges.this, CreateChallenge.class);
+                Bundle infosSportChallenge = new Bundle();
+                infosSportChallenge.putStringArray("infosSportChallenge", new String[]{sportName, "0"});
+                intent.putExtras(infosSportChallenge);
                 startActivity(intent);
             }
         });
