@@ -48,8 +48,8 @@ public class HomeActivity extends Activity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
-
-        ParseFeatures.getInstance().initializeParseFeatures(this);
+        if (ParseFeatures.getInstance().isInit() == false)
+            ParseFeatures.getInstance().initializeParseFeatures(this);
     }
 
     @Override

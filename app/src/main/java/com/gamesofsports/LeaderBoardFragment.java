@@ -152,7 +152,13 @@ public class LeaderBoardFragment extends Fragment {
                         catch (IOException e) {
                             image = null;
                         }
-                        facebookUsers.add(new FacebookUser(image, user.getName(), "0", "0"));
+                        ParseFeatures features = ParseFeatures.getInstance();
+                        if (features.isInit() == false)
+                            features.initializeParseFeatures(getActivity());
+                        String score = features.getInfosUser(user.getProperty("id").toString(), "experience");
+                        if (score == null)
+                            score = "42";
+                        facebookUsers.add(new FacebookUser(image, user.getName(), score));
                     }
                 }
             }

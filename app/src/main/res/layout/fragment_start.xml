@@ -50,7 +50,7 @@
             android:layout_below="@+id/user_score"
             android:layout_marginTop="20dp"
             android:textSize="20sp"
-            android:text="Level 4"
+            android:text="Level 0"
             />
 
         <ProgressBar
@@ -63,6 +63,8 @@
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/user_level"
             android:layout_marginTop="30dp"
+            android:max="100"
+            android:progressDrawable="@drawable/progress_drawable" />
             />
     </RelativeLayout>
 </FrameLayout>

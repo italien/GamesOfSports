@@ -12,6 +12,7 @@ import com.parse.ParseUser;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by debarg_a on 14/11/2014.
@@ -21,6 +22,8 @@ public class ParseFeatures {
 
     private static ParseFeatures features = null;
     private boolean init = false;
+    private ParseUser user = null;
+    private boolean UserInit = false;
 
     public ParseFeatures()
     {
@@ -49,6 +52,11 @@ public class ParseFeatures {
         return init;
     }
 
+    public boolean isUserInit()
+    {
+        return this.UserInit;
+    }
+
     public boolean signUpUser(ParseUser user)
     {
         try
@@ -68,27 +76,99 @@ public class ParseFeatures {
         return new ParseUser();
     }
 
-    public boolean addInfosUser(ParseUser user, List<String> infosUser)
+    public boolean addInfosUser(ParseUser user, String id)
     {
-        if (infosUser.size() != 3)
-            return false;
-        user.setUsername(infosUser.get(0));
-        user.setPassword(infosUser.get(1));
-        user.setEmail(infosUser.get(2));
+        Random generator = new Random();
+        StringBuilder randomStringBuilder = new StringBuilder();
+        int randomLength = generator.nextInt(12);
+        char tempChar;
+        for (int i = 0; i < randomLength; i++){
+            tempChar = (char) (generator.nextInt(96) + 32);
+            randomStringBuilder.append(tempChar);
+        }
+        user.setUsername(id);
+        user.setPassword(randomStringBuilder.toString());
+        user.put("facebookId", id);
         user.put("experience", 0);
-        user.put("level", 0);
+        user.put("level", 1);
         return true;
     }
 
-    public String getInfosUser(ParseUser user, String infos)
+    public boolean saveUser()
     {
-        Object result =  user.get(infos);
+        try {
+            this.user.save();
+        }
+        catch (ParseException e) {
+            System.out.println("Error : " + e.getLocalizedMessage());
+            return false;
+        }
+        return true;
+    }
+
+    public String getInfosUser(ParseUser user, String info)
+    {
+        Object result =  user.get(info);
         return (result.toString());
+    }
+
+    public  String getInfosUser(String id, String info)
+    {
+        ParseQuery<ParseUser> query = ParseUser.getQuery();
+        query.whereEqualTo("facebookId", id);
+        try {
+            List<ParseUser> users = query.find();
+            if (users.size() != 1)
+            {
+                System.out.println("Error occured");
+                return null;
+            }
+            ParseUser user = users.get(0);
+            Object result = user.get(info);
+            return result.toString();
+        }
+        catch (ParseException e)
+        {
+            System.out.println("Error : " + e.getLocalizedMessage());
+            return null;
+        }
+    }
+
+    public boolean loginUser(String id)
+    {
+        ParseQuery<ParseUser> query = ParseUser.getQuery();
+        query.whereEqualTo("facebookId", id);
+        try {
+            List<ParseUser> users = query.find();
+            if (users.size() != 1)
+            {
+                System.out.println("Error occured");
+                return false;
+            }
+            this.user = users.get(0);
+            this.UserInit = true;
+            System.out.println("User connected");
+            return true;
+        }
+        catch (ParseException e)
+        {
+            System.out.println("Error : " + e.getLocalizedMessage());
+            return false;
+        }
     }
 
     public ParseUser getUser()
     {
-        return ParseUser.getCurrentUser();
+        return this.user;
+    }
+
+    public boolean freeUser()
+    {
+        this.user.unpinInBackground();
+        this.UserInit = false;
+
+        System.out.println("User Free");
+        return true;
     }
 
     public boolean saveObject(ParseObject object)
@@ -108,6 +188,22 @@ public class ParseFeatures {
     {
         object.unpinInBackground();
         return;
+    }
+
+    public boolean isUserCreated(String id)
+    {
+        ParseQuery<ParseUser> query = ParseUser.getQuery();
+        query.whereEqualTo("facebookId", id);
+        try {
+            List<ParseUser> list = query.find();
+            if (list.size() == 1)
+                return true;
+            return false;
+        }
+        catch (ParseException e) {
+            System.out.println("Error : " + e.getLocalizedMessage());
+            return true;
+        }
     }
 
     public List<String> getObjectName(String table, String condition, int value)
@@ -189,4 +285,37 @@ public class ParseFeatures {
             return null;
         }
     }
+
+    public ParseObject getObject(String table, String col, int value)
+    {
+        ParseQuery query = ParseQuery.getQuery(table);
+        query.whereEqualTo(col, value);
+
+        try {
+            List<ParseObject> list = query.find();
+            return(list.get(0));
+        }
+        catch (ParseException e)
+        {
+            System.out.println("Error : " + e.getLocalizedMessage());
+            return null;
+        }
+    }
+
+    public ParseObject getObject(String table, String col, String value)
+    {
+        ParseQuery query = ParseQuery.getQuery(table);
+        query.whereEqualTo(col, value);
+
+        try {
+            List<ParseObject> list = query.find();
+            return(list.get(0));
+        }
+        catch (ParseException e)
+        {
+            System.out.println("Error : " + e.getLocalizedMessage());
+            return null;
+        }
+    }
+
 }

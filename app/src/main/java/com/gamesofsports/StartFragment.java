@@ -5,9 +5,11 @@ package com.gamesofsports;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.facebook.Request;
@@ -17,6 +19,9 @@ import com.facebook.SessionState;
 import com.facebook.UiLifecycleHelper;
 import com.facebook.model.GraphUser;
 import com.facebook.widget.ProfilePictureView;
+import com.parse.ParseObject;
+import com.parse.ParseUser;
+import com.parseFeatures.ParseFeatures;
 
 
 /**
@@ -27,6 +32,11 @@ public class StartFragment extends Fragment {
 
     private ProfilePictureView profilePictureView;
     private TextView userNameView;
+    private TextView userScore;
+    private TextView userLevel;
+    private ProgressBar scoreProgress;
+    private Handler mHandler = new Handler();
+
     private static final int REAUTH_ACTIVITY_CODE = 100;
 
     public StartFragment() {
@@ -50,6 +60,9 @@ public class StartFragment extends Fragment {
         profilePictureView.setCropped(true);
 
         userNameView = (TextView) view.findViewById(R.id.selection_user_name);
+        userScore = (TextView) view.findViewById(R.id.user_score);
+        userLevel = (TextView) view.findViewById(R.id.user_level);
+        scoreProgress = (ProgressBar) view.findViewById(R.id.user_experience);
         Session session = Session.getActiveSession();
         if (session != null && session.isOpened()) {
             // Get the user's data
@@ -82,6 +95,22 @@ public class StartFragment extends Fragment {
                                 profilePictureView.setProfileId(user.getId());
                                 // Set the Textview's text to the user's name.
                                 userNameView.setText(user.getName());
+                                ParseFeatures features = ParseFeatures.getInstance();
+                                if (features.isInit() == false)
+                                    features.initializeParseFeatures(getActivity());
+                                if (features.isUserInit() == false)
+                                    return;
+                                ParseUser userP = features.getUser();
+                                int score = Integer.parseInt(features.getInfosUser(userP, "experience"));
+                                int level = Integer.parseInt(features.getInfosUser(userP, "level"));
+                                userLevel.setText("Score : " + features.getInfosUser(userP, "experience"));
+                                userScore.setText("Level : " + features.getInfosUser(userP, "level"));
+                                ParseObject info = features.getObject("Level", "level", level);
+                                int number = info.getInt("number");
+                                float percentage = ((float) score / (float) number) * (float) 100;
+                                final int percent = (int) percentage;
+                                scoreProgress.setProgress(percent);
+
                             }
                         }
                         if (response.getError() != null) {

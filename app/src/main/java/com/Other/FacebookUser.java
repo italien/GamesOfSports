@@ -13,15 +13,13 @@ public class FacebookUser {
     private Drawable picture;
     private String name;
     private String score;
-    private String id;
     private BaseAdapter adapter;
     //protected abstract View.OnClickListener getOnClickListener();
 
-    public FacebookUser(Drawable picture, String name, String score, String id) {
+    public FacebookUser(Drawable picture, String name, String score) {
         this.picture = picture;
         this.name = name;
         this.score = score;
-        this.id = id;
     }
 
     public String getName(){
@@ -43,18 +41,6 @@ public class FacebookUser {
 
     public void setScore(String score) {
         this.score = score;
-
-        if (adapter != null) {
-            adapter.notifyDataSetChanged();
-        }
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
 
         if (adapter != null) {
             adapter.notifyDataSetChanged();
