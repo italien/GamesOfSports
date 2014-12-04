@@ -23,7 +23,6 @@
         android:layout_below="@+id/nameChallenge"
         android:layout_marginTop="15dp"
         android:textSize="15sp"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae tempus neque. Morbi at augue a risus porta euismod. Maecenas lobortis nec ex a pellentesque. Cras pretium quam ipsum, id imperdiet ante faucibus blandit. Aenean maximus ullamcorper massa rutrum eleifend. Donec risus arcu, efficitur id ullamcorper sed, interdum sed tellus. Maecenas placerat nunc et velit tempus egestas."
         />
 
     <LinearLayout

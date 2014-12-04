@@ -51,6 +51,9 @@ public class ListChallenges extends Activity {
             public void onItemClick(AdapterView<?> parent, final View view,
                                     int position, long id) {
                 Intent intent = new Intent(ListChallenges.this, DescriptionChallenge.class);
+                Bundle infosSportChallenge = new Bundle();
+                infosSportChallenge.putStringArray("infosChallenge", new String[]{listChallengesObjects.get(position).getString("challengeContent"), listChallengesObjects.get(position).getObjectId()});
+                intent.putExtras(infosSportChallenge);
                 startActivity(intent);
             }
         });

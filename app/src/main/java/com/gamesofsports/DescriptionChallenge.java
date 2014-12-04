@@ -7,19 +7,28 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.facebook.widget.FacebookDialog;
 
 
 public class DescriptionChallenge extends Activity {
 
+    private TextView    descriptionChallenge;
+    private String      idChallenge;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_description_challenge);
         final Button shareButton = (Button) findViewById(R.id.share);
         final Button acceptButton = (Button) findViewById(R.id.accept);
-
+        descriptionChallenge = (TextView) findViewById(R.id.descriptionChallenge);
+        final Bundle extras = getIntent().getExtras();
+        if (extras != null)
+        {
+            descriptionChallenge.setText(extras.getStringArray("infosChallenge")[0]);
+            idChallenge = extras.getStringArray("infosChallenge")[1];
+        }
         shareButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 FacebookDialog.MessageDialogBuilder builder = new FacebookDialog.MessageDialogBuilder(DescriptionChallenge.this)
@@ -27,8 +36,7 @@ public class DescriptionChallenge extends Activity {
                         .setName("Try to beat me on this challenge")
                         .setCaption("Try to beat your friends.")
                         .setPicture("http://i.imgur.com/L49TtVW.png?1")
-                        .setDescription("My score is 120, try to beat me :)");
-
+                        .setDescription(descriptionChallenge.getText().toString());
                 // If the Facebook app is installed and we can present the share dialog
                 if (builder.canPresent()) {
                     FacebookDialog dialog = builder.build();
@@ -43,6 +51,9 @@ public class DescriptionChallenge extends Activity {
             public void onClick(View v)
             {
                 Intent intent = new Intent(DescriptionChallenge.this, StartChallenge.class);
+                Bundle descriptionChallenges = new Bundle();
+                descriptionChallenges.putStringArray("descriptionChallenges", new String[]{idChallenge});
+                intent.putExtras(descriptionChallenges);
                 startActivity(intent);
             }
         });

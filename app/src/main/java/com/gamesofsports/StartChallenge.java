@@ -11,6 +11,9 @@ import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.TextView;
 
+import com.parse.ParseObject;
+import com.parseFeatures.ParseFeatures;
+
 
 public class StartChallenge extends Activity {
 
@@ -18,22 +21,33 @@ public class StartChallenge extends Activity {
     private     TextView        countDown, textPoints;
     private     Boolean         started = false;
     private     CountDownTimer  cdTimer;
-    private     long            total;
+    private     long            total = 0;
     private     int             points = 0;
+    private     String          idChallenge;
+    private     ParseFeatures   parse;
+    private     ParseObject     challengeObject;
+    private     int             timeChallenge, seconds, minutes = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_challenge);
-
+        final Bundle extras = getIntent().getExtras();
+        if (extras != null)
+            idChallenge = extras.getStringArray("descriptionChallenges")[0];
+        parse = ParseFeatures.getInstance();
+        challengeObject = parse.getObjectWithId("Challenges", idChallenge);
         start = (Button) findViewById(R.id.startStop);
         addPoints = (Button) findViewById(R.id.addPoints);
         removePoints = (Button) findViewById(R.id.removePoints);
         textPoints = (TextView) findViewById(R.id.textCounter);
         countDown = (TextView) findViewById(R.id.chrono);
-
-        countDown.setText("0:30");
-        total = 3 * 1000;
+        timeChallenge = Integer.parseInt(challengeObject.getString("time"));
+        minutes = timeChallenge / 60;
+        seconds = seconds % 60;
+        countDown.setText("" + minutes + ":"
+                + String.format("%02d", seconds));
+        total = timeChallenge * 1000;
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,8 +90,8 @@ public class StartChallenge extends Activity {
             public void onTick(long millisUntilFinished) {
                 //update total with the remaining time left
                 total = millisUntilFinished;
-                int seconds = (int) (millisUntilFinished / 1000);
-                int minutes = seconds / 60;
+                seconds = (int) (millisUntilFinished / 1000);
+                minutes = seconds / 60;
                 seconds = seconds % 60;
                 countDown.setText("" + minutes + ":"
                         + String.format("%02d", seconds));
