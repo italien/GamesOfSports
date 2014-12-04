@@ -350,6 +350,21 @@ public class ParseFeatures {
         }
     }
 
+    public List<ParseObject> getAllObjects(String table)
+    {
+        ParseQuery query = ParseQuery.getQuery(table);
+
+        try {
+            List<ParseObject> results = query.find();
+            return results;
+        }
+        catch (ParseException e)
+        {
+            System.out.println("Error : " + e.getLocalizedMessage());
+            return null;
+        }
+    }
+
     public boolean addChallenge(String idSport, String nameChallenge, String content, int time, int difficulty, int success)
     {
         int points = 0;
