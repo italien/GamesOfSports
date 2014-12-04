@@ -350,6 +350,21 @@ public class ParseFeatures {
         }
     }
 
+    public List<ParseObject> getAllObjects(String table)
+    {
+        ParseQuery query = ParseQuery.getQuery(table);
+
+        try {
+            List<ParseObject> results = query.find();
+            return results;
+        }
+        catch (ParseException e)
+        {
+            System.out.println("Error : " + e.getLocalizedMessage());
+            return null;
+        }
+    }
+
     public boolean addChallenge(String idSport, String nameChallenge, String content, int time, int difficulty, int success)
     {
         int points = 0;
@@ -463,5 +478,22 @@ public class ParseFeatures {
             System.out.println("Error : " + e.getLocalizedMessage());
         }
 
+    }
+
+    public boolean checkAchievement(String achievementId)
+    {
+        ParseQuery query = ParseQuery.getQuery("LinkUserAchievements");
+        query.whereEqualTo("idAchievement", achievementId);
+        query.whereEqualTo("idUser", this.user.getObjectId());
+        try {
+            List<ParseObject> objects = query.find();
+            if (objects.size() == 0)
+                return false;
+            return true;
+        }
+        catch (ParseException e) {
+            System.out.println("Error : " + e.getLocalizedMessage());
+            return false;
+        }
     }
 }
