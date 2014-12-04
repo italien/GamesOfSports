@@ -12,13 +12,21 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.parse.ParseObject;
 import com.parseFeatures.ParseFeatures;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class ListChallenges extends Activity {
+    private ParseFeatures parse;
     private ListView    listChallenges;
-    private Button      create;
-    private String      sportName;
+    private List<ParseObject> listChallengesObjects;
+    private List<String>    nameChallenges = new ArrayList<String>();
+    private Button          create;
+    private String          sportName;
+    private String          idSport;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +36,14 @@ public class ListChallenges extends Activity {
         if (extras != null)
         {
             sportName = extras.getStringArray("infosSport")[0];
+            idSport = extras.getStringArray("infosSport")[1];
         }
-        String[]challenges = {"challenge1", "challenge2", "challenge3", "challenge4"};
+        parse = ParseFeatures.getInstance();
+        listChallengesObjects = parse.getObjects("Challenges", "idSport", idSport);
+        for (int i = 0; i < listChallengesObjects.size(); i++)
+            nameChallenges.add(listChallengesObjects.get(i).getString("challengeName"));
         listChallenges= (ListView) findViewById(R.id.listChallenges);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, challenges);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, nameChallenges);
         listChallenges.setAdapter(adapter); // Inflate the layout for this fragment
         listChallenges.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -48,7 +60,7 @@ public class ListChallenges extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(ListChallenges.this, CreateChallenge.class);
                 Bundle infosSportChallenge = new Bundle();
-                infosSportChallenge.putStringArray("infosSportChallenge", new String[]{sportName, "0"});
+                infosSportChallenge.putStringArray("infosSportChallenge", new String[]{sportName, idSport});
                 intent.putExtras(infosSportChallenge);
                 startActivity(intent);
             }
