@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:textSize="20sp"
         android:layout_below="@+id/logoChallenge"
         android:text="@string/start_challenge"
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/textStartChallenge"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:textSize="50sp"
         android:textColor="#000000"
         />
@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/chrono"
         android:textSize="25sp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_centerHorizontal="true"
         android:text="@string/points"
         />
@@ -58,25 +58,31 @@
         android:text="@string/counter"
         />
 
-
-
     <Button
-        android:id="@+id/startStop"
+        android:id="@+id/startPause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/stop"
+        android:text="@string/startPause"
+        />
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:text="@string/startStop"
+        android:text="@string/stop"
         />
 
     <Button
         android:id="@+id/addPoints"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/startStop"
-        android:layout_toLeftOf="@+id/startStop"
-        android:layout_toStartOf="@+id/startStop"
+        android:layout_above="@+id/startPause"
+        android:layout_toLeftOf="@+id/startPause"
+        android:layout_toStartOf="@+id/startPause"
         android:textSize="25sp"
         android:layout_marginBottom="25dp"
         android:text="@string/addPoints"
@@ -86,11 +92,11 @@
         android:id="@+id/removePoints"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/startStop"
-        android:layout_toEndOf="@+id/startStop"
+        android:layout_toRightOf="@+id/startPause"
+        android:layout_toEndOf="@+id/startPause"
         android:layout_alignTop="@+id/addPoints"
         android:textSize="25sp"
         android:text="@string/removePoints"
-        />
+     />
 
 </RelativeLayout>

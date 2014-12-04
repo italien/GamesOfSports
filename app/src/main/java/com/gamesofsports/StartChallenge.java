@@ -17,7 +17,7 @@ import com.parseFeatures.ParseFeatures;
 
 public class StartChallenge extends Activity {
 
-    private     Button          start, addPoints, removePoints;
+    private     Button          start, addPoints, removePoints, stop;
     private     TextView        countDown, textPoints;
     private     Boolean         started = false;
     private     CountDownTimer  cdTimer;
@@ -37,7 +37,8 @@ public class StartChallenge extends Activity {
             idChallenge = extras.getStringArray("descriptionChallenges")[0];
         parse = ParseFeatures.getInstance();
         challengeObject = parse.getObjectWithId("Challenges", idChallenge);
-        start = (Button) findViewById(R.id.startStop);
+        start = (Button) findViewById(R.id.startPause);
+        stop = (Button) findViewById(R.id.stop);
         addPoints = (Button) findViewById(R.id.addPoints);
         removePoints = (Button) findViewById(R.id.removePoints);
         textPoints = (TextView) findViewById(R.id.textCounter);
@@ -53,7 +54,7 @@ public class StartChallenge extends Activity {
             public void onClick(View v) {
                 if (started == false)
                 {
-                    start.setText("Stop");
+                    start.setText("Pause");
                     started = true;
                     startCountDownTimer();
                 }
@@ -63,6 +64,21 @@ public class StartChallenge extends Activity {
                     started = false;
                     cdTimer.cancel();
                 }
+            }
+        });
+
+        stop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cdTimer.cancel();
+                Intent intent = new Intent(StartChallenge.this, EndChallenge.class);
+                Bundle results = new Bundle();
+                if (points >= challengeObject.getInt("successCondition"))
+                    results.putStringArray("results", new String[]{"WIN", Integer.toString(challengeObject.getInt("successPoints")), Integer.toString(points), challengeObject.getString("challengeName")});
+                else
+                    results.putStringArray("results", new String[]{"LOSE", "0", Integer.toString(points), challengeObject.getString("challengeName")});
+                intent.putExtras(results);
+                startActivity(intent);
             }
         });
         addPoints.setOnClickListener(new View.OnClickListener() {

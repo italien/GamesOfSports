@@ -23,7 +23,9 @@
     <string name="counter">0</string>
     <string name="addPoints">+</string>
     <string name="removePoints">-</string>
-    <string name="startStop">Start</string>
+    <string name="startPause">Start</string>
+    <string name="stop">Stop</string>
+
     <string name="endChallenge">Challenge ended !</string>
     <string name="shareFacebook">Share on Facebook</string>
     <string name="home">Home</string>
