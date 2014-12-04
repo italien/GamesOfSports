@@ -119,7 +119,6 @@ public class HomeActivity extends Activity
             // Only show items in the action bar relevant to this screen
             // if the drawer is not showing. Otherwise, let the drawer
             // decide what to show in the action bar.
-            getMenuInflater().inflate(R.menu.home, menu);
             restoreActionBar();
             return true;
         }
@@ -177,5 +176,6 @@ public class HomeActivity extends Activity
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
     }
+
 
 }

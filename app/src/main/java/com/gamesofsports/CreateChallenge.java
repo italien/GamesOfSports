@@ -28,7 +28,7 @@ public class CreateChallenge extends Activity {
         minutes = (NumberPicker) findViewById(R.id.minutes);
         secondes = (NumberPicker) findViewById(R.id.secondes);
         minutes.setMinValue(0);
-        minutes.setMaxValue(60);
+        minutes.setMaxValue(100);
         minutes.setMinValue(0);
         secondes.setMaxValue(60);
         minutes.setWrapSelectorWheel(true);
@@ -60,22 +60,4 @@ public class CreateChallenge extends Activity {
         });
     }
 
-    /*@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.create_challenge, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }*/
 }

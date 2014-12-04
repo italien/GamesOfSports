@@ -64,4 +64,9 @@ public class EndChallenge extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onBackPressed()
+    {
+    }
 }

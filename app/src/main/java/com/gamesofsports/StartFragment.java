@@ -159,4 +159,8 @@ public class StartFragment extends Fragment {
         super.onDestroy();
         uiHelper.onDestroy();
     }
+
+    public void onBackPressed() {
+        //handle back press event
+    }
 }

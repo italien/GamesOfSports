@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">GamesOfSports</string>
+    <string name="app_name">Games Of Sports</string>
     <string name="action_settings">Settings</string>
     <string name="app_id">625780580864433</string>
-    <string name="title_activity_settings">SettingsActivity</string>
     <string name="title_activity_home">Games Of Sports</string>
     <string name="title_section1">Home</string>
     <string name="title_section2">Individual Sport</string>
@@ -15,28 +14,20 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="conditions">general terms</string>
     <string name="version">\t\t\tVersion 1.0\n ©2014 GamesOfSports</string>
-    <string name="title_activity_list_challenges">ListChallenges</string>
     <string name="createChallenge">Create challenge</string>
-    <string name="title_activity_description_challenge">DescriptionChallenge</string>
     <string name="acceptChallenge">Accept</string>
     <string name="shareChallenge">Share with friends</string>
-    <string name="title_activity_start_challenge">StartChallenge</string>
     <string name="start_challenge">Challenge in progress !</string>
     <string name="points">Points</string>
     <string name="counter">0</string>
     <string name="addPoints">+</string>
     <string name="removePoints">-</string>
     <string name="startStop">Start</string>
-    <string name="title_activity_end_challenge">EndChallenge</string>
     <string name="endChallenge">Challenge ended !</string>
     <string name="shareFacebook">Share on Facebook</string>
     <string name="home">Home</string>
-    <string name="title_activity_create_challenge">CreateChallenge</string>
     <string name="titleChallenge">Challenge name:</string>
     <string name="titleDescription">Description</string>
     <string name="titleTimer">Timer</string>
     <string name="create">Create</string>
-    <string name="nameApplication">Games Of Sports</string>
-    <string name="title_activity_share">ShareActivity</string>
-
 </resources>
