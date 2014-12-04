@@ -10,12 +10,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.parseFeatures.ParseFeatures;
+
 
 public class EndChallenge extends Activity {
 
     private TextView    results, numberExperience, numberPoints;
     private Button      home, shareFacebook;
     private String      challengeName;
+    private String      challengeId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +36,18 @@ public class EndChallenge extends Activity {
             numberExperience.setText(extras.getStringArray("results")[1]);
             numberPoints.setText(extras.getStringArray("results")[2]);
             challengeName = extras.getStringArray("results")[3];
+            challengeId = extras.getStringArray("results")[4];
+
+            if (extras.getStringArray("results")[0].equals("WIN")) {
+                ParseFeatures features = ParseFeatures.getInstance();
+                if (features.isInit() == false)
+                    features.initializeParseFeatures(this);
+                if (features.isUserInit() == true) {
+                    features.addUserPoints(Integer.parseInt(extras.getStringArray("results")[1]));
+                    features.challengeSucceeded(challengeId);
+                    features.checkAchievement();
+                }
+            }
             Log.d("challengename", challengeName);
         }
         home.setOnClickListener(new View.OnClickListener() {

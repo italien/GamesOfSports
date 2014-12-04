@@ -96,11 +96,12 @@ public class ParseFeatures {
 
     public boolean saveUser()
     {
+        System.out.println(this.user);
         try {
             this.user.save();
         }
         catch (ParseException e) {
-            System.out.println("Error : " + e.getLocalizedMessage());
+            System.out.println("Error -- : " + e.getLocalizedMessage());
             return false;
         }
         return true;
@@ -147,6 +148,7 @@ public class ParseFeatures {
             }
             this.user = users.get(0);
             this.UserInit = true;
+            ParseUser.logIn(this.user.getString("username"), "123456");
             System.out.println("User connected");
             return true;
         }
@@ -166,6 +168,8 @@ public class ParseFeatures {
     {
         this.user.unpinInBackground();
         this.UserInit = false;
+
+        ParseUser.logOut();
 
         System.out.println("User Free");
         return true;
@@ -292,8 +296,7 @@ public class ParseFeatures {
         query.whereEqualTo("objectId", id);
 
         try {
-            List<ParseObject> list = query.find();
-            return(list.get(0));
+            return(query.getFirst());
         }
         catch (ParseException e)
         {
@@ -308,8 +311,7 @@ public class ParseFeatures {
         query.whereEqualTo("name", id);
 
         try {
-            List<ParseObject> list = query.find();
-            return(list.get(0));
+            return(query.getFirst());
         }
         catch (ParseException e)
         {
@@ -324,8 +326,7 @@ public class ParseFeatures {
         query.whereEqualTo(col, value);
 
         try {
-            List<ParseObject> list = query.find();
-            return(list.get(0));
+            return(query.getFirst());
         }
         catch (ParseException e)
         {
@@ -340,8 +341,7 @@ public class ParseFeatures {
         query.whereEqualTo(col, value);
 
         try {
-            List<ParseObject> list = query.find();
-            return(list.get(0));
+            return(query.getFirst());
         }
         catch (ParseException e)
         {
@@ -350,10 +350,118 @@ public class ParseFeatures {
         }
     }
 
-    public boolean addChallenge(String sport, String nameChallenge, String content, int time, int difficulty)
+    public boolean addChallenge(String idSport, String nameChallenge, String content, int time, int difficulty, int success)
     {
+        int points = 0;
+
+        if (difficulty == 1)
+            points = 10;
+        else if (difficulty == 2)
+            points = 20;
+        else
+            points = 30;
         ParseObject object = new ParseObject("Challenges");
-        //1object.put("")
+        object.put("challengeName", nameChallenge);
+        object.put("challengeContent", content);
+        object.put("time", Integer.toString(time));
+        object.put("successCondition", success);
+        object.put("difficulty", difficulty);
+        object.put("idSport", idSport);
+        object.put("successPoints", points);
+        if (this.saveObject(object) == false)
+            return false;
         return true;
+    }
+
+    public void challengeSucceeded(String challengeId)
+    {
+        ParseQuery query = ParseQuery.getQuery("LinkUserChallenges");
+        query.whereEqualTo("idChallenges", challengeId);
+        query.whereEqualTo("idUser", this.user.get("facebookId").toString());
+
+        try {
+            List<ParseObject> objects = query.find();
+            //if (objects.size() == 1)
+            //    return;
+
+            ParseObject object = new ParseObject("LinkUserChallenges");
+            object.put("idChallenges", challengeId);
+            object.put("idUser", this.user.getObjectId());
+            this.saveObject(object);
+        }
+        catch (ParseException e) {
+            System.out.println("Error : " + e.getLocalizedMessage());
+            return;
+        }
+    }
+
+    public void addUserPoints(int points)
+    {
+        this.saveUser();
+        int exp = Integer.parseInt(this.user.get("experience").toString()) + points;
+        int level = this.user.getInt("level");
+        this.user.put("experience", exp);
+
+        this.saveUser();
+        ParseQuery query = ParseQuery.getQuery("Level");
+        query.whereEqualTo("level", level + 1);
+        try {
+            ParseObject object = query.getFirst();
+            if (Integer.parseInt(object.get("number").toString()) >= exp)
+                this.user.increment("level");
+        }
+        catch (ParseException e) {
+            System.out.println("Error : " + e.getLocalizedMessage());
+            return;
+        }
+        this.saveUser();
+        System.out.println("User add points");
+    }
+
+    public void checkAchievement()
+    {
+        ParseQuery query = ParseQuery.getQuery("Achievements");
+        try {
+            List<ParseObject> objects = query.find();
+            for (int i = 0; i < objects.size(); i++)
+            {
+                ParseObject object = objects.get(i);
+
+                ParseQuery check = ParseQuery.getQuery("LinkUserAchievements");
+                check.whereEqualTo("idAchievement", object.getObjectId());
+                check.whereEqualTo("idUser", this.user.getObjectId());
+                List<ParseObject> results = check.find();
+                if (results.size() > 0)
+                    continue;
+
+                if (object.getBoolean("successType") == true)
+                {
+                    check = ParseQuery.getQuery("LinkUserChallenges");
+                    check.whereEqualTo("idUser", this.user.getObjectId());
+                    List<ParseObject> checkResult = check.find();
+                    if (checkResult.size() >= object.getInt("succesCondition"))
+                    {
+                        ParseObject achievement = new ParseObject("LinkUserAchievements");
+                        achievement.put("idAchievement", object.getObjectId());
+                        achievement.put("idUser", this.user.getObjectId());
+                        this.saveObject(achievement);
+                    }
+                }
+                else
+                {
+                    if (this.user.getInt("experience") >= object.getInt("succesCondition"))
+                    {
+                        ParseObject achievement = new ParseObject("LinkUserAchievements");
+                        achievement.put("idAchievement", object.getObjectId());
+                        achievement.put("idUser", this.user.getObjectId());
+                        this.saveObject(achievement);
+                    }
+                }
+            }
+        }
+        catch (ParseException e) {
+            System.out.println("Error : " + e.getLocalizedMessage());
+        }
+
     }
 }

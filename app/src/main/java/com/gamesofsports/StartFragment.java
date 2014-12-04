@@ -105,9 +105,12 @@ public class StartFragment extends Fragment {
                                 int level = Integer.parseInt(features.getInfosUser(userP, "level"));
                                 userLevel.setText("Score : " + features.getInfosUser(userP, "experience"));
                                 userScore.setText("Level : " + features.getInfosUser(userP, "level"));
-                                ParseObject info = features.getObject("Level", "level", level);
-                                int number = info.getInt("number");
-                                float percentage = ((float) score / (float) number) * (float) 100;
+                                ParseObject info1 = features.getObject("Level", "level", level - 1);
+                                ParseObject info2 = features.getObject("Level", "level", level);
+                                int number1 = info1.getInt("number");
+                                int number2 = info2.getInt("number");
+                                int score2 = score - number1;
+                                float percentage = ((float) score2 / ((float) number2 - (float) number1)) * (float) 100;
                                 final int percent = (int) percentage;
                                 scoreProgress.setProgress(percent);
 

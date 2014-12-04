@@ -143,7 +143,7 @@ public class LeaderBoardFragment extends Fragment {
                         URL imageSRC = null;
                         Drawable image;
                         try {
-                            InputStream in = new URL("https://graph.facebook.com/" + user.getId() + "/picture").openStream();
+                            InputStream in = new URL("https://graph.facebook.com/" + user.getId() + "/picture?type=large").openStream();
                             image = Drawable.createFromStream(in, "facebook-pictures");
                         }
                         catch (MalformedURLException e) {
@@ -156,8 +156,6 @@ public class LeaderBoardFragment extends Fragment {
                         if (features.isInit() == false)
                             features.initializeParseFeatures(getActivity());
                         String score = features.getInfosUser(user.getProperty("id").toString(), "experience");
-                        if (score == null)
-                            score = "42";
                         facebookUsers.add(new FacebookUser(image, user.getName(), score));
                     }
                 }
