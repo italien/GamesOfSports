@@ -92,12 +92,26 @@
             android:id="@+id/titleLevel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_below="@+id/secondes"
+            android:layout_toLeftOf="@+id/titleTimer"
+            android:layout_toStartOf="@+id/titleTimer"
             android:textSize="25sp"
             android:textColor="#000000"
             android:layout_marginTop="10dp"
             android:text="@string/titleLevel"
+            />
+
+        <TextView
+            android:id="@+id/titleSuccess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/secondes"
+            android:layout_toRightOf="@+id/titleTimer"
+            android:layout_toEndOf="@+id/titleTimer"
+            android:textSize="25sp"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"
+            android:text="@string/titleSuccess"
             />
 
         <NumberPicker
@@ -105,7 +119,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/titleLevel"
-            android:layout_centerHorizontal="true"
+            android:layout_toLeftOf="@+id/titleTimer"
+            android:layout_toStartOf="@+id/titleTimer"
+            android:layout_marginTop="10dp"
+            />
+
+        <NumberPicker
+            android:id="@+id/success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleLevel"
+            android:layout_toRightOf="@+id/titleTimer"
+            android:layout_toEndOf="@+id/titleTimer"
             android:layout_marginTop="10dp"
             />
 

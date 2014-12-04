@@ -31,4 +31,5 @@
     <string name="titleTimer">Timer</string>
     <string name="create">Create</string>
     <string name="titleLevel">Difficulty</string>
+    <string name="titleSuccess">Success</string>
 </resources>
