@@ -178,7 +178,13 @@ public class ParseFeatures {
     public boolean saveObject(ParseObject object)
     {
         //Check
-        object.saveEventually();
+        try {
+            object.save();
+        }
+        catch (ParseException e) {
+            System.out.println("Error : " + e.getLocalizedMessage());
+            return false;
+        }
         return true;
     }
 
