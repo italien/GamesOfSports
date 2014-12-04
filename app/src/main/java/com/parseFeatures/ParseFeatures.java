@@ -479,4 +479,21 @@ public class ParseFeatures {
         }
 
     }
+
+    public boolean checkAchievement(String achievementId)
+    {
+        ParseQuery query = ParseQuery.getQuery("LinkUserAchievements");
+        query.whereEqualTo("idAchievement", achievementId);
+        query.whereEqualTo("idUser", this.user.getObjectId());
+        try {
+            List<ParseObject> objects = query.find();
+            if (objects.size() == 0)
+                return false;
+            return true;
+        }
+        catch (ParseException e) {
+            System.out.println("Error : " + e.getLocalizedMessage());
+            return false;
+        }
+    }
 }
