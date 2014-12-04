@@ -19,6 +19,7 @@
     <string name="shareChallenge">Share with friends</string>
     <string name="start_challenge">Challenge in progress !</string>
     <string name="points">Points</string>
+    <string name="experience">XP</string>
     <string name="counter">0</string>
     <string name="addPoints">+</string>
     <string name="removePoints">-</string>

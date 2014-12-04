@@ -100,7 +100,10 @@ public class StartChallenge extends Activity {
                 //add Intent
                 Intent intent = new Intent(StartChallenge.this, EndChallenge.class);
                 Bundle results = new Bundle();
-                results.putStringArray("results", new String[]{"WIN", "300"});
+                if (points >= challengeObject.getInt("successCondition"))
+                    results.putStringArray("results", new String[]{"WIN", Integer.toString(challengeObject.getInt("successPoints")), Integer.toString(points), challengeObject.getString("challengeName")});
+                else
+                    results.putStringArray("results", new String[]{"LOSE", "0", Integer.toString(points), challengeObject.getString("challengeName")});
                 intent.putExtras(results);
                 startActivity(intent);
             }

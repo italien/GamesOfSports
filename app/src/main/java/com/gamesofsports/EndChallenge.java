@@ -3,6 +3,7 @@ package com.gamesofsports;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,8 +13,9 @@ import android.widget.TextView;
 
 public class EndChallenge extends Activity {
 
-    private TextView    results, numberPoints;
+    private TextView    results, numberExperience, numberPoints;
     private Button      home, shareFacebook;
+    private String      challengeName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,12 +23,16 @@ public class EndChallenge extends Activity {
         home = (Button) findViewById(R.id.Home);
         shareFacebook = (Button) findViewById(R.id.shareFacebook);
         results = (TextView) findViewById(R.id.result);
+        numberExperience = (TextView) findViewById(R.id.numberExperience);
         numberPoints = (TextView) findViewById(R.id.numberPoints);
         Bundle extras = getIntent().getExtras();
         if (extras != null)
         {
             results.setText(extras.getStringArray("results")[0]);
-            numberPoints.setText(extras.getStringArray("results")[1]);
+            numberExperience.setText(extras.getStringArray("results")[1]);
+            numberPoints.setText(extras.getStringArray("results")[2]);
+            challengeName = extras.getStringArray("results")[3];
+            Log.d("challengename", challengeName);
         }
         home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +46,9 @@ public class EndChallenge extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(EndChallenge.this ,ShareActivity.class);
+                Bundle points = new Bundle();
+                points.putStringArray("points", new String[]{numberPoints.getText().toString(), challengeName});
+                intent.putExtras(points);
                 startActivity(intent);
             }
         });

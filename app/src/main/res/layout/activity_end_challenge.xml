@@ -31,14 +31,34 @@
         />
 
     <TextView
-        android:id="@+id/points"
+        android:id="@+id/xp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/result"
-        android:layout_marginTop="25dp"
         android:textSize="25sp"
         android:layout_centerHorizontal="true"
         android:textColor="#000000"
+        android:text="@string/experience"
+        />
+
+    <TextView
+        android:id="@+id/numberExperience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="50sp"
+        android:layout_below="@+id/xp"
+        />
+
+    <TextView
+        android:id="@+id/points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numberExperience"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000"
+        android:layout_marginTop="15dp"
         android:text="@string/points"
         />
 
@@ -47,7 +67,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
         android:textSize="50sp"
         android:layout_below="@+id/points"
         />

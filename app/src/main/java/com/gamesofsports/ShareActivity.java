@@ -19,20 +19,23 @@ import com.facebook.widget.WebDialog;
 public class ShareActivity extends Activity {
 
     private UiLifecycleHelper uiHelper;
-
+    private String description;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_share);
         uiHelper = new UiLifecycleHelper(this, null);
         uiHelper.onCreate(savedInstanceState);
+        Bundle extras = getIntent().getExtras();
+        if (extras != null)
+            description = "I did " + extras.getStringArray("points")[0] + " points on this challenge : " + extras.getStringArray("points")[1];
         if (FacebookDialog.canPresentShareDialog(getApplicationContext(), FacebookDialog.ShareDialogFeature.SHARE_DIALOG))
         {
             // Publish the post using the Share Dialog
             FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(this)
                     .setLink("https://developers.facebook.com/android")
                     .setName("Games Of Sports")
-                    .setDescription("I did ten points on this challenge bitch please")
+                    .setDescription(description)
                     .setPicture("http://i.imgur.com/L49TtVW.png?1")
                     .build();
             uiHelper.trackPendingDialogCall(shareDialog.present());
@@ -46,7 +49,7 @@ public class ShareActivity extends Activity {
         Bundle params = new Bundle();
         params.putString("name", "Facebook SDK for Android");
         params.putString("caption", "Build great social apps and get more installs.");
-        params.putString("description", "I did ten points on this challenge bitch please");
+        params.putString("description", description);
         params.putString("link", "https://developers.facebook.com/android");
         params.putString("picture", "http://i.imgur.com/L49TtVW.png?1");
 
