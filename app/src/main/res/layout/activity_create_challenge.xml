@@ -88,13 +88,33 @@
             android:layout_toEndOf="@+id/titleTimer"
             android:layout_centerHorizontal="true"
             />
+        <TextView
+            android:id="@+id/titleLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/secondes"
+            android:textSize="25sp"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"
+            android:text="@string/titleLevel"
+            />
+
+        <NumberPicker
+            android:id="@+id/level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleLevel"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            />
 
         <Button
             android:id="@+id/createNewChallenge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/secondes"
+            android:layout_below="@+id/level"
             android:layout_marginTop="25dp"
             android:text="@string/create"
             />

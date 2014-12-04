@@ -206,6 +206,22 @@ public class ParseFeatures {
         }
     }
 
+    public List<ParseObject> getObjects(String table, String condition, String value)
+    {
+        ParseQuery query = ParseQuery.getQuery(table);
+        query.whereEqualTo(condition, value);
+
+        try {
+            List<ParseObject> list = query.find();
+            return list;
+        }
+        catch (ParseException e)
+        {
+            System.out.println("Error : " + e.getLocalizedMessage());
+            return null;
+        }
+    }
+
     public List<String> getObjectName(String table, String condition, int value)
     {
         List<String> result = new ArrayList<String>();
@@ -318,4 +334,10 @@ public class ParseFeatures {
         }
     }
 
+    public boolean addChallenge(String sport, String nameChallenge, String content, int time, int difficulty)
+    {
+        ParseObject object = new ParseObject("Challenges");
+        //1object.put("")
+        return true;
+    }
 }
