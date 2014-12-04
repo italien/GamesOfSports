@@ -41,7 +41,11 @@ public class ListChallenges extends Activity {
         parse = ParseFeatures.getInstance();
         listChallengesObjects = parse.getObjects("Challenges", "idSport", idSport);
         for (int i = 0; i < listChallengesObjects.size(); i++)
-            nameChallenges.add(listChallengesObjects.get(i).getString("challengeName"));
+        {
+            String challengeName = listChallengesObjects.get(i).getString("challengeName") + " - Difficulty " + Integer.toString(listChallengesObjects.get(i).getInt("difficulty"));
+            nameChallenges.add(challengeName);
+        }
+
         listChallenges= (ListView) findViewById(R.id.listChallenges);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, nameChallenges);
         listChallenges.setAdapter(adapter); // Inflate the layout for this fragment
