@@ -36,6 +36,10 @@ public class StartChallenge extends Activity {
         if (extras != null)
             idChallenge = extras.getStringArray("descriptionChallenges")[0];
         parse = ParseFeatures.getInstance();
+        if (parse.isInit()==false)
+            parse.initializeParseFeatures(this);
+        if (parse.isUserInit() == false)
+            return;
         challengeObject = parse.getObjectWithId("Challenges", idChallenge);
         start = (Button) findViewById(R.id.startPause);
         stop = (Button) findViewById(R.id.stop);
@@ -74,9 +78,9 @@ public class StartChallenge extends Activity {
                 Intent intent = new Intent(StartChallenge.this, EndChallenge.class);
                 Bundle results = new Bundle();
                 if (points >= challengeObject.getInt("successCondition"))
-                    results.putStringArray("results", new String[]{"WIN", Integer.toString(challengeObject.getInt("successPoints")), Integer.toString(points), challengeObject.getString("challengeName")});
+                    results.putStringArray("results", new String[]{"WIN", Integer.toString(challengeObject.getInt("successPoints")), Integer.toString(points), challengeObject.getString("challengeName"), challengeObject.getObjectId()});
                 else
-                    results.putStringArray("results", new String[]{"LOSE", "0", Integer.toString(points), challengeObject.getString("challengeName")});
+                    results.putStringArray("results", new String[]{"LOSE", "0", Integer.toString(points), challengeObject.getString("challengeName"), challengeObject.getObjectId()});
                 intent.putExtras(results);
                 startActivity(intent);
             }
@@ -124,26 +128,6 @@ public class StartChallenge extends Activity {
                 startActivity(intent);
             }
         }.start();
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.start_challenge, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     @Override

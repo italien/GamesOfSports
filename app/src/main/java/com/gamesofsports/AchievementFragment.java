@@ -5,6 +5,7 @@ package com.gamesofsports;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,8 +16,10 @@ import android.widget.CheckedTextView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
+import com.parse.ParseObject;
 import com.parseFeatures.ParseFeatures;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -27,7 +30,8 @@ import java.util.List;
 public class AchievementFragment extends Fragment {
     private ParseFeatures parse;
     private ListView listAchievements;
-    //private List<String> namesAchievements;
+    private List<ParseObject> achievements;
+    private List<String> namesAchievements = new ArrayList<String>();;
 
 
     public AchievementFragment() {
@@ -43,16 +47,26 @@ public class AchievementFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_achievement, container, false);
         listAchievements= (ListView) v.findViewById(R.id.listAchievements);
         parse = ParseFeatures.getInstance();
-        // namesAchievements = parse.getObjectName("Sports", "idCategory", 1);
-        String[]namesAchievements =  {"Achievement1", "Achievement2", "Achievement3", "Achievement4", "Achievement5","Achievement6", "Achievement7", "Achievement8", "Achievement9", "Achievement10","Achievement11", "Achievement12", "Achievement13", "Achievement14", "Achievement15"};
+        if (parse.isInit()==false)
+            parse.initializeParseFeatures(getActivity());
+        if (parse.isUserInit() == false)
+            return null;
+        achievements = parse.getAllObjects("Achievements");
+
+        for (int i = 0; i < achievements.size(); i++) {
+            namesAchievements.add(achievements.get(i).getString("name"));
+        }
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_checked, namesAchievements);
         listAchievements.setAdapter(adapter);// Inflate the layout for this fragment
         listAchievements.setEnabled(false);
         listAchievements.setChoiceMode(2);
-        listAchievements.setItemChecked(0, true);
-        listAchievements.setItemChecked(2, true);
-        listAchievements.setItemChecked(5, true);
-        listAchievements.setItemChecked(8, true);
+
+        for (int i = 0; i < achievements.size(); i++) {
+            if (parse.checkAchievement(achievements.get(i).getObjectId()))
+                listAchievements.setItemChecked(i, true);
+            else
+                listAchievements.setItemChecked(i, false);
+        }
         return v;
     }
 

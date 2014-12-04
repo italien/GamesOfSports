@@ -42,6 +42,10 @@ public class ListIndividualSports extends Fragment {
         View v = inflater.inflate(R.layout.fragment_list_individual_sports, container, false);
         listIndiviudalSport = (ListView) v.findViewById(R.id.listIndividualSports);
         parse = ParseFeatures.getInstance();
+        if (parse.isInit()==false)
+            parse.initializeParseFeatures(getActivity());
+        if (parse.isUserInit() == false)
+            return null;
         listSports = parse.getObjects("Sports", "idCategory", 0);
         for (int i = 0; i < listSports.size(); i++)
             namesSport.add(listSports.get(i).getString("name"));
