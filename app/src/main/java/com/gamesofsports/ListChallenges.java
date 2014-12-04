@@ -24,6 +24,7 @@ public class ListChallenges extends Activity {
     private ListView    listChallenges;
     private List<ParseObject> listChallengesObjects;
     private List<String>    nameChallenges = new ArrayList<String>();
+    private ArrayAdapter<String> adapter;
     private Button          create;
     private String          sportName;
     private String          idSport;
@@ -42,12 +43,13 @@ public class ListChallenges extends Activity {
         listChallengesObjects = parse.getObjects("Challenges", "idSport", idSport);
         for (int i = 0; i < listChallengesObjects.size(); i++)
         {
+            Log.d("name", listChallengesObjects.get(i).getString("challengeName"));
             String challengeName = listChallengesObjects.get(i).getString("challengeName") + " - Difficulty " + Integer.toString(listChallengesObjects.get(i).getInt("difficulty"));
             nameChallenges.add(challengeName);
         }
 
         listChallenges= (ListView) findViewById(R.id.listChallenges);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, nameChallenges);
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, nameChallenges);
         listChallenges.setAdapter(adapter); // Inflate the layout for this fragment
         listChallenges.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 

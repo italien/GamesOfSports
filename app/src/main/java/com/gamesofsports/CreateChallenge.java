@@ -62,7 +62,9 @@ public class CreateChallenge extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CreateChallenge.this, ListChallenges.class);
-                startActivity(intent);
+                Bundle infosSportChallenge = new Bundle();
+                infosSportChallenge.putStringArray("infosSport", new String[]{nameSport.getText().toString(), idSport});
+                intent.putExtras(infosSportChallenge);
                 ParseFeatures features = ParseFeatures.getInstance();
                 if (features.isInit() == false)
                     features.initializeParseFeatures(getParent());
@@ -70,6 +72,7 @@ public class CreateChallenge extends Activity {
                     return;
                 int time = minutesChallenge * 60 + secondesChallenge;
                 features.addChallenge(idSport, nameChallenge.getText().toString(), descriptionChallenge.getText().toString(), time, difficultyChallenge, successChallenge);
+                startActivity(intent);
             }
         });
         minutes.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
