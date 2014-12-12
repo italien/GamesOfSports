@@ -100,10 +100,11 @@ public class MainFragment extends android.support.v4.app.Fragment {
                         return;
                     GraphUser user = getResults(response);
                     String id = user.getProperty("id").toString();
+                    String fullName = user.getName();
                     if (features.isUserCreated(id) == false)
                     {
                         ParseUser newUser = features.createUser();
-                        features.addInfosUser(newUser, id);
+                        features.addInfosUser(newUser, id, fullName);
                         if (features.signUpUser(newUser) == false) {
                             System.out.println("Error signup");
                             return;

@@ -76,7 +76,7 @@ public class ParseFeatures {
         return new ParseUser();
     }
 
-    public boolean addInfosUser(ParseUser user, String id)
+    public boolean addInfosUser(ParseUser user, String id, String fullName)
     {
         Random generator = new Random();
         StringBuilder randomStringBuilder = new StringBuilder();
@@ -86,7 +86,7 @@ public class ParseFeatures {
             tempChar = (char) (generator.nextInt(96) + 32);
             randomStringBuilder.append(tempChar);
         }
-        user.setUsername(id);
+        user.setUsername(fullName);
         user.setPassword(randomStringBuilder.toString());
         user.put("facebookId", id);
         user.put("experience", 0);
@@ -96,7 +96,6 @@ public class ParseFeatures {
 
     public boolean saveUser()
     {
-        System.out.println(this.user);
         try {
             this.user.save();
         }
